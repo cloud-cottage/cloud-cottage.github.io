@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>课程表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        td:hover {
+            background-color: #f0f7ff;
+            transition: background-color 0.3s;
+        }
+        .break {
+            background-color: #fff3e0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>第一学期课程表</h1>
+    <table>
+        <tr>
+            <th>时间</th>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+            <th>星期四</th>
+            <th>星期五</th>
+        </tr>
+        <tr>
+            <td>8:00-9:40</td>
+            <td>高等数学<br>教104</td>
+            <td>大学英语<br>教205</td>
+            <td>线性代数<br>教108</td>
+            <td>高等数学<br>教104</td>
+            <td>编程基础<br>机房203</td>
+        </tr>
+        <tr>
+            <td>10:00-11:40</td>
+            <td>物理<br>理102</td>
+            <td>体育<br>操场</td>
+            <td>大学英语<br>教205</td>
+            <td>物理实验<br>实验楼304</td>
+            <td>线性代数<br>教108</td>
+        </tr>
+        <tr class="break">
+            <td colspan="6">午休时间 12:00-14:00</td>
+        </tr>
+        <tr>
+            <td>14:00-15:40</td>
+            <td>编程基础<br>机房203</td>
+            <td>思政<br>教301</td>
+            <td></td>
+            <td>物理<br>理102</td>
+            <td>大学英语<br>教205</td>
+        </tr>
+        <tr>
+            <td>16:00-17:40</td>
+            <td></td>
+            <td>高等数学<br>教104</td>
+            <td>思政<br>教301</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
