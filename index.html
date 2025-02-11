@@ -40,9 +40,76 @@
             background-color: #fff3e0;
             font-style: italic;
         }
+        * {
+  margin: 0;
+  padding: 0;
+}
+
+        body {
+        overflow: hidden;
+        background: #ecf0f3;
+        height: 100vh; 
+        }
+
+        .logo {
+        font-family: "Montserrat", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; 
+        color: #000;
+        font-size: 50px;
+        }
+
+        span {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        background: #55b9f3;
+        transform: translate(-50%, -50%);
+        animation: blow 4s linear infinite;
+        }
+
+
+        @keyframes blow {
+        0% {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -1000%);
+            opacity: 0;
+            filter: hue-rotate(720deg);
+        }
+        }
     </style>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+        let body = document.querySelector('body');
+        let circle = document.createElement('span');
+        let x = e.offsetX;
+        let y = e.offsetY;
+        circle.style.left = x + "px";
+        circle.style.top = y + "px";
+        let size = Math.random() * 100;
+        circle.style.width = 20 + size + "px";
+        circle.style.height = 20 + size + "px";
+        body.appendChild(circle);
+        setTimeout(function() {
+            circle.remove();
+        }, 1800);
+        });
+
+    </script>
 </head>
 <body>
+    <div class="logo">
+    鼠标移动查看演示
+  </div> 
     <h1>第一学期课程表</h1>
     <table>
         <tr>
